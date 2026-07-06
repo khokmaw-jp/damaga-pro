@@ -1,0 +1,9 @@
+.case-admin-images { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; padding: 15px; margin: 0 0 20px; border: 1px solid var(--line); border-radius: 8px; }
+.case-admin-images legend { padding: 0 8px; color: var(--green); font-size: .75rem; font-weight: 800; }
+.case-admin-images label { display: grid; gap: 6px; margin: 0; padding: 9px; border: 1px solid var(--line); border-radius: 6px; }
+.case-admin-images img { width: 100%; height: 110px; object-fit: cover; border-radius: 4px; }
+.case-admin-images span { display: flex; align-items: center; gap: 5px; font-size: .62rem; }
+.case-admin-images input { width: auto; padding: 0; }
+.case-admin-images small { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.admin-editor input[type="file"] { padding: 18px; background: #f3f7f4; }
+@media(max-width:720px){.case-admin-images{grid-template-columns:1fr 1fr}.case-admin-images img{height:95px}}

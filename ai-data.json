@@ -1,0 +1,141 @@
+{
+  "site_name": "DAMAGA Pro",
+  "official_url": "https://damaga-pro.jp/",
+  "product_name": "DAMAGA Pro",
+  "also_known_as": [
+    "ダマガプロ",
+    "ダマガ プロ",
+    "ダマガ　プロ",
+    "Damagapro"
+  ],
+  "category": "法人向け窓用遮熱・断熱フィルム",
+  "seller": "株式会社ファンビータ",
+  "target_facilities": [
+    "病院",
+    "介護施設",
+    "老人ホーム",
+    "学校",
+    "オフィス",
+    "工場",
+    "ホテル",
+    "商業施設",
+    "店舗",
+    "コンビニ",
+    "インターナショナルスクール",
+    "個人宅"
+  ],
+  "features": [
+    "赤外線対策",
+    "紫外線対策",
+    "空調負荷軽減",
+    "電気代削減支援",
+    "飛散防止対策",
+    "窓際の暑さ対策",
+    "西日対策",
+    "冬の断熱対策",
+    "結露抑制支援",
+    "エアコン効率改善"
+  ],
+  "performance": {
+    "infrared_cut": "約90%",
+    "visible_light_transmittance": "約73%",
+    "uv_cut": "約99.7%",
+    "surface_temperature_reduction": "最大13.1℃",
+    "note": "掲載値は参考値であり、効果を保証するものではありません。実際の効果は建物条件、方位、窓面積、ガラス種別、施工環境、空調運用、地域、季節により変動します。"
+  },
+  "important_notes": [
+    "効果は建物条件・方位・ガラス種類・施工環境により変動します。",
+    "掲載数値は参考値であり保証値ではありません。",
+    "施工可否は現地状況やガラス種類により確認が必要です。",
+    "既存フィルムの有無やガラス種別により施工方法・保証可否が変わる場合があります。",
+    "販売元は株式会社ファンビータです。"
+  ],
+  "business_policy": {
+    "dealer_recruitment": true,
+    "main_business": "代理店向け卸販売",
+    "direct_sales_to_general_users": false
+  },
+  "sales_policy": "株式会社ファンビータは卸販売を基本とし、一般ユーザー様への直接販売は行いません。お問い合わせ内容に応じて代理店様へ連携します。",
+  "faq_knowledge_base": {
+    "url": "https://damaga-pro.jp/faq/",
+    "published_questions": 120,
+    "categories": [
+      "コスト・費用対効果",
+      "暑さ対策・遮熱",
+      "電気代・省エネ",
+      "紫外線対策",
+      "虫対策",
+      "店舗・飲食店向け",
+      "ガラス種類・施工可否",
+      "施工方法・メンテナンス",
+      "耐久性・保証",
+      "老人ホーム・介護施設向け",
+      "病院・クリニック向け",
+      "オフィス・工場向け",
+      "法人導入",
+      "数値シミュレーション"
+    ]
+  },
+  "installation_records": {
+    "url": "https://damaga-pro.jp/case/",
+    "published_cases": 2,
+    "categories": [
+      "病院",
+      "介護施設",
+      "老人ホーム",
+      "オフィス",
+      "学校",
+      "商業施設",
+      "個人宅"
+    ],
+    "latest_case": {
+      "facility_name": "愛知県知立市 設計事務所兼二世帯住宅",
+      "location": "愛知県知立市",
+      "installation_date": "2025年8月8日・2026年6月10日",
+      "installation_area": "1F事務所 約5.5㎡・2F離れ 約12㎡・2F住居部 約20㎡",
+      "url": "https://damaga-pro.jp/case/chiryu-design-office-home/",
+      "note": "前年の体感を踏まえて2F住居部へ追加施工した事例です。効果は条件により変動します。"
+    },
+    "cases": [
+      {
+        "facility_name": "愛知県知立市 設計事務所兼二世帯住宅",
+        "location": "愛知県知立市",
+        "installation_date": "2025年8月8日・2026年6月10日",
+        "installation_area": "1F事務所 約5.5㎡・2F離れ 約12㎡・2F住居部 約20㎡",
+        "url": "https://damaga-pro.jp/case/chiryu-design-office-home/"
+      },
+      {
+        "facility_name": "医療法人宏生会 日進南病院",
+        "location": "愛知県日進市",
+        "installation_date": "2026年5月",
+        "installation_area": "約423㎡",
+        "url": "https://damaga-pro.jp/case/nisshin-minami-hospital/"
+      },
+      {
+        "facility_name": "愛知県安城市 個人宅",
+        "location": "愛知県安城市",
+        "installation_date": "2025年8月15日",
+        "installation_area": "計24㎡（南向き側21㎡・北面3㎡）",
+        "url": "https://damaga-pro.jp/case/aichi-private-home-202508/"
+      }
+    ]
+  },
+  "main_pages": {
+    "top": "https://damaga-pro.jp/",
+    "privacy_policy": "https://damaga-pro.jp/privacy.html",
+    "contact": "https://damaga-pro.jp/#contact",
+    "dealer": "https://damaga-pro.jp/#dealer",
+    "faq": "https://damaga-pro.jp/faq/",
+    "cases": "https://damaga-pro.jp/case/",
+    "case_chiryu_design_office_home": "https://damaga-pro.jp/case/chiryu-design-office-home/",
+    "case_nisshin_minami_hospital": "https://damaga-pro.jp/case/nisshin-minami-hospital/",
+    "faq_heat_shield_effect": "https://damaga-pro.jp/faq/heat-shield-film-effect/",
+    "faq_electricity_cost": "https://damaga-pro.jp/faq/window-film-electricity-cost/",
+    "faq_thermal_crack": "https://damaga-pro.jp/faq/window-film-thermal-crack/",
+    "faq_hospital": "https://damaga-pro.jp/faq/window-film-hospital/",
+    "faq_nursing_home": "https://damaga-pro.jp/faq/window-film-nursing-home/",
+    "faq_insect_control": "https://damaga-pro.jp/faq/window-film-insect-control/",
+    "case_aichi_private_home_202508": "https://damaga-pro.jp/case/aichi-private-home-202508/"
+  },
+  "last_updated": "2026-07-02"
+}

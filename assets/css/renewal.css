@@ -1,0 +1,248 @@
+/* 2026 renewal: scoped to the top page so FAQ/admin layouts remain stable. */
+.home-renewal {
+  --renewal-blue: #0b3550;
+  --renewal-blue-light: #e8f2f6;
+  background: #f6f8f6;
+}
+
+.home-renewal .site-header.is-scrolled { background: rgba(255,255,255,.97); }
+.home-renewal .button { border-radius: 999px; }
+.home-renewal .button-accent { background: linear-gradient(135deg, #ef5a39, #d83d2d); }
+.home-renewal .section-heading h2,
+.home-renewal .about h2,
+.home-renewal .portal h2,
+.home-renewal .contact h2 {
+  font-size: clamp(2rem, 4vw, 3.15rem);
+  line-height: 1.3;
+  letter-spacing: -.045em;
+}
+.home-renewal .overview-heading h2 {
+  font-size: clamp(2.15rem, 4.2vw, 3.4rem);
+  line-height: 1.22;
+  letter-spacing: -.055em;
+}
+.home-renewal .dealer-snapshot h2 {
+  font-size: clamp(2rem, 3.9vw, 3rem);
+  line-height: 1.32;
+  letter-spacing: -.045em;
+}
+
+.home-renewal .hero {
+  padding-top: 132px;
+  background:
+    radial-gradient(circle at 88% 8%, rgba(93,164,129,.28), transparent 32%),
+    radial-gradient(circle at 32% 105%, rgba(19,95,143,.23), transparent 38%),
+    linear-gradient(124deg, #022b25, #064734 62%, #0a5b42);
+}
+.home-renewal .hero::before { opacity: .1; background-size: 64px 64px; }
+.home-renewal .hero-grid { grid-template-columns: .92fr 1.08fr; gap: 48px; padding-bottom: 72px; }
+.home-renewal .hero-copy { position: relative; z-index: 3; }
+.home-renewal .hero-kicker { color: #d5eca5; letter-spacing: .19em; }
+.home-renewal .hero h1 { max-width: 690px; font-size: clamp(2.45rem, 3.7vw, 3.65rem); line-height: 1.16; }
+.home-renewal .hero-title-product { display: block; margin-bottom: 11px; color: #fff; font-family: "DM Sans", "Noto Sans JP", sans-serif; font-size: .3em; font-weight: 700; letter-spacing: .04em; }
+.home-renewal .hero h1 em { color: #ddf29f; }
+.home-renewal .hero h1 span { font-size: .88em; }
+.home-renewal .hero-impact {
+  grid-template-columns: 1fr;
+  gap: 5px;
+  min-width: 210px;
+  padding: 17px 20px;
+  border-radius: 18px;
+  border-color: rgba(216,237,150,.55);
+  background: linear-gradient(135deg, rgba(216,237,150,.16), rgba(255,255,255,.08));
+}
+.home-renewal .hero-impact small,
+.home-renewal .hero-impact span {
+  display: block;
+  color: rgba(255,255,255,.72);
+  font-size: .68rem;
+  font-weight: 800;
+}
+.home-renewal .hero-impact strong {
+  color: #e4f5a7;
+  font-size: 1.15rem;
+  line-height: 1.05;
+}
+.home-renewal .hero-impact strong b { font-size: 2.1em; }
+.home-renewal .hero-lead { max-width: 650px; margin-top: 17px; line-height: 1.8; font-size: .92rem; }
+.home-renewal .hero-alias { max-width: 650px; margin: 9px 0 0; color: rgba(255,255,255,.45); font-size: .6rem; line-height: 1.8; }
+.home-renewal .hero-buttons { margin-top: 29px; }
+.home-renewal .hero-trust { margin-top: 27px; }
+.home-renewal .hero-trust li::before { background: #d8ed96; }
+
+.home-renewal .hero-visual { min-height: 605px; }
+.home-renewal .hero-building {
+  inset: 0 0 28px 0;
+  border: 1px solid rgba(255,255,255,.25);
+  border-radius: 34px 165px 34px 34px;
+  box-shadow: 0 42px 100px rgba(0,0,0,.3);
+}
+.home-renewal .hero-building::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(3,38,31,.38), transparent 48%);
+}
+.home-renewal .hero-building img { object-position: 62% center; }
+.home-renewal .hero-image-label {
+  position: absolute;
+  z-index: 3;
+  top: 30px;
+  left: 24px;
+  display: grid;
+  gap: 4px;
+  margin: 0;
+  padding: 15px 18px;
+  border: 1px solid rgba(255,255,255,.35);
+  border-radius: 10px;
+  background: rgba(3,42,32,.72);
+  backdrop-filter: blur(10px);
+}
+.home-renewal .hero-image-label small { color: #cfeaa6; font-family: "DM Sans", sans-serif; font-size: .58rem; font-weight: 700; letter-spacing: .12em; }
+.home-renewal .hero-image-label strong { color: #fff; font-size: .76rem; }
+.home-renewal .hero-install {
+  left: -42px;
+  bottom: -2px;
+  width: 52%;
+  border-width: 8px;
+  border-radius: 18px;
+}
+.home-renewal .hero-install img { height: auto; aspect-ratio: 1.34; object-fit: cover; object-position: 13% 48%; }
+.home-renewal .hero-install figcaption { padding: 13px 15px; }
+.home-renewal .hero-number { right: -14px; bottom: 8px; width: 185px; border-radius: 18px; background: #e9f4c9; }
+.home-renewal .hero-stats { border-radius: 22px 22px 0 0; box-shadow: 0 -18px 60px rgba(0,0,0,.15); }
+.home-renewal .hero-stats > div { padding: 27px 26px; }
+.home-renewal .hero-stats strong { color: #0a7150; }
+.home-renewal .hero-data-note { padding: 12px 0 18px; margin: 0 auto; color: rgba(255,255,255,.58); font-size: .62rem; }
+
+.home-renewal .business-overview { padding-top: 118px; background: linear-gradient(#f2f6f1, #fff); }
+.home-renewal .outcome-panel,
+.home-renewal .roi-panel { border-radius: 24px; }
+.home-renewal .outcome-panel { border: 1px solid #e0e9e2; }
+.home-renewal .roi-panel { background: linear-gradient(145deg, #07382e, #0a5a40); }
+.home-renewal .outcome-list,
+.home-renewal .outcome-list > div { background: transparent; }
+.home-renewal .dealer-snapshot { overflow: hidden; border-radius: 28px; background: linear-gradient(135deg, #0a2f45, #103e57); }
+
+.home-renewal .challenges { background: #f7f8f5; }
+.home-renewal .challenge-layout { grid-template-columns: 1fr 1fr; gap: 65px; }
+.home-renewal .challenge-image { min-height: 650px; border-radius: 24px 150px 24px 24px; }
+.home-renewal .challenge-image img { object-position: 72% center; }
+.home-renewal .heat-line-one { left: 57%; top: 24%; width: 175px; height: 175px; }
+.home-renewal .image-label { left: 28px; right: 28px; bottom: 28px; width: max-content; max-width: calc(100% - 56px); border-radius: 4px; background: rgba(3,42,32,.72); backdrop-filter: blur(8px); }
+.home-renewal .challenge-list article { border-radius: 12px; box-shadow: 0 10px 30px rgba(4,56,35,.04); }
+
+.home-renewal .about { background: linear-gradient(135deg, #042d29, #0a344d); }
+.home-renewal .about::after { content: "WINDOW"; font-size: 15rem; }
+.home-renewal .product-photo { border-radius: 18px; }
+.home-renewal .about-specs { gap: 1px; border-radius: 24px; overflow: hidden; background: rgba(255,255,255,.13); }
+.home-renewal .spec-feature { background: rgba(5,67,56,.86); }
+.home-renewal .spec-feature:nth-child(even) { background: rgba(10,53,77,.9); }
+.home-renewal .spec-pills { background: rgba(3,42,32,.9); }
+
+.home-renewal .strengths { background: #fff; }
+.home-renewal .strength-card { border-radius: 18px; background: linear-gradient(145deg, #fff, #f7faf7); }
+.home-renewal .line-icon { background: #e7f2d3; }
+
+.home-renewal .simulation { background: #edf3f1; }
+.home-renewal .case-card { border-radius: 24px; box-shadow: 0 22px 65px rgba(4,56,35,.1); }
+.home-renewal .case-image { height: 330px; }
+.home-renewal .case-image img { object-position: center; }
+.home-renewal .case-card:first-child .case-image img { object-position: center 58%; }
+.home-renewal .case-card:last-child .case-image img { object-position: center 62%; }
+.home-renewal .case-results > div { border-radius: 10px; background: linear-gradient(145deg, #07543a, #0b6b4a); }
+
+.home-renewal .facilities { background: #fff; }
+.home-renewal .facility-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 14px;
+}
+.home-renewal .facility-grid span {
+  display: flex;
+  align-items: center;
+  min-height: 64px;
+  min-width: 0;
+  padding: 17px 18px 17px 52px;
+  border-radius: 999px;
+  background: #f8faf8;
+  line-height: 1.35;
+}
+.home-renewal .facility-grid span::before { left: 21px; }
+.home-renewal .comparison { background: linear-gradient(135deg, #eef4ec, #eaf2f5); }
+.home-renewal .price-message,
+.home-renewal .comparison-table-wrap { border-radius: 18px; overflow: hidden; }
+.home-renewal .benefits { background: linear-gradient(120deg, #062f2b, #0b3550); }
+.home-renewal .inline-cta { border-radius: 18px; background: linear-gradient(135deg, #063f2c, #0b3550); }
+.home-renewal .dealer { background: linear-gradient(125deg, #081f30, #0b3550); }
+.home-renewal .dealer-feature-grid,
+.home-renewal .dealer-flow { border-radius: 18px; overflow: hidden; }
+.home-renewal .message-photo { border-radius: 24px; }
+.home-renewal .portal-preview { border-radius: 24px; }
+.home-renewal .faq { background: #f8faf8; }
+.home-renewal .contact { background: linear-gradient(125deg, #042d29, #0b4358); }
+.home-renewal .contact-form { border-radius: 22px; }
+
+@media (max-width: 1020px) {
+  .home-renewal .hero-grid { grid-template-columns: 1fr; gap: 54px; }
+  .home-renewal .hero-copy { max-width: 800px; }
+  .home-renewal .hero-visual { max-width: 760px; min-height: 610px; }
+  .home-renewal .challenge-layout { grid-template-columns: 1fr; }
+  .home-renewal .challenge-image { min-height: 600px; }
+}
+
+@media (max-width: 720px) {
+  .home-renewal .hero { padding-top: 108px; }
+  .home-renewal .hero h1 { font-size: clamp(2rem, 8.8vw, 2.7rem); line-height: 1.2; }
+  .home-renewal .hero-impact {
+    min-width: 0;
+    width: max-content;
+    max-width: 100%;
+    padding: 14px 16px;
+  }
+  .home-renewal .hero-impact strong b { font-size: 1.9em; }
+  .home-renewal .overview-heading h2 {
+    font-size: clamp(2rem, 9vw, 2.6rem);
+    line-height: 1.28;
+  }
+  .home-renewal .section-heading h2,
+  .home-renewal .about h2,
+  .home-renewal .portal h2,
+  .home-renewal .contact h2 {
+    font-size: clamp(1.75rem, 8.2vw, 2.35rem);
+    line-height: 1.34;
+    letter-spacing: -.04em;
+  }
+  .home-renewal .dealer-snapshot h2 {
+    font-size: clamp(1.85rem, 8.8vw, 2.45rem);
+    line-height: 1.34;
+  }
+  .home-renewal .hero-title-product { font-size: .36em; }
+  .home-renewal .hero h1 span { font-size: .82em; }
+  .home-renewal .hero-lead { line-height: 1.8; }
+  .home-renewal .hero-buttons { grid-template-columns: 1fr; }
+  .home-renewal .hero-buttons .text-link { grid-column: auto; }
+  .home-renewal .hero-visual { min-height: 440px; }
+  .home-renewal .hero-building { inset: 0 0 26px 0; border-radius: 24px 85px 24px 24px; }
+  .home-renewal .hero-building img { object-position: 66% center; }
+  .home-renewal .hero-image-label { top: 14px; left: 14px; padding: 10px 11px; }
+  .home-renewal .hero-image-label strong { font-size: .63rem; }
+  .home-renewal .hero-install { left: -3px; bottom: 0; width: 56%; border-width: 4px; border-radius: 12px; }
+  .home-renewal .hero-install figcaption { padding: 8px; }
+  .home-renewal .hero-number { right: -2px; width: 145px; padding: 13px; }
+  .home-renewal .hero-data-note { width: calc(100% - 32px); padding-bottom: 16px; }
+  .home-renewal .business-overview { padding-top: 78px; }
+  .home-renewal .challenge-image { min-height: 470px; border-radius: 18px 82px 18px 18px; }
+  .home-renewal .challenge-image img { object-position: 71% center; }
+  .home-renewal .heat-line-one { left: 42%; top: 24%; width: 128px; height: 128px; }
+  .home-renewal .about::after { font-size: 7rem; bottom: -40px; }
+  .home-renewal .case-image { height: 245px; }
+  .home-renewal .facility-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .home-renewal .facility-grid span {
+    min-height: 58px;
+    border-radius: 14px;
+    padding: 14px 10px 14px 40px;
+    font-size: .68rem;
+  }
+  .home-renewal .facility-grid span::before { left: 14px; }
+}

@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /faq/admin/
+Disallow: /faq/data/
+Disallow: /case/admin/
+Disallow: /case/data/
+
+Sitemap: https://damaga-pro.jp/sitemap.xml

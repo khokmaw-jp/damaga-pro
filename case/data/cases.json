@@ -1,0 +1,286 @@
+{
+  "categories": [
+    {
+      "id": "hospital",
+      "name": "病院"
+    },
+    {
+      "id": "care-facility",
+      "name": "介護施設"
+    },
+    {
+      "id": "nursing-home",
+      "name": "老人ホーム"
+    },
+    {
+      "id": "office",
+      "name": "オフィス"
+    },
+    {
+      "id": "school",
+      "name": "学校"
+    },
+    {
+      "id": "commercial",
+      "name": "商業施設"
+    },
+    {
+      "id": "residential",
+      "name": "個人宅"
+    }
+  ],
+  "items": [
+    {
+      "slug": "chiryu-design-office-home",
+      "category": "office",
+      "facility_name": "愛知県知立市 設計事務所兼二世帯住宅",
+      "location": "愛知県知立市",
+      "installation_date": "2025年8月8日・2026年6月10日",
+      "installation_date_iso": "2026-06-10",
+      "interview_date": "2026年6月",
+      "area": "1F事務所 約5.5㎡・2F離れ 約12㎡・2F住居部 約20㎡",
+      "installation_locations": [
+        "1F事務所 北西角部屋",
+        "2F離れ部屋 東・西・北西",
+        "2F子世帯 南東・南",
+        "玄関横北面",
+        "中吹抜け東面",
+        "北面大窓"
+      ],
+      "product": "DAMAGA Pro",
+      "scale": "事務所兼二世帯住宅（1F親世帯兼事務所・2F子世帯）",
+      "summary": "前年に施工した2Fの遮熱効果を実感し、翌年に2F住居部へ追加施工。事務所と住居が一体となった建物の窓環境改善事例です。",
+      "lead_quote": "昨年の遮熱効果を実感し、追加施工へ",
+      "challenge": "1Fの事務所兼親世帯、2Fの子世帯という住まいと仕事場が重なる建物で、方角ごとに日射の入り方が異なっていました。北西角部屋、東西の窓、南面の窓、吹抜けや大窓など、時間帯によって暑さや眩しさが気になりやすい窓が複数ありました。",
+      "installation": "2025年8月8日に1F事務所の北西角部屋約5.5㎡、2F離れ部屋の東・西・北西面約12㎡へ施工。その後、前年に貼り付けた2Fの遮熱効果を実感されたことから、2026年6月10日に2F子世帯の南東・南・玄関横の北面、中吹抜けの東面、北面の大窓へ約20㎡を追加施工しました。",
+      "changes": "前年施工部分の遮熱効果を体感いただいたことが、2F住居部の追加施工につながりました。既存窓を活かしたまま、住居部と事務所部それぞれの窓環境を段階的に整えた事例です。効果は方角、窓面積、日射条件、空調運用により異なります。",
+      "customer_voice": "昨年貼り付けた2Fの遮熱効果を実感したため、今回は2Fの住居部にも貼付しました。\n\n仕事場と住居が同じ建物内にあるため、日中の室内環境を整えることは、業務のしやすさと暮らしやすさの両方に関わります。",
+      "our_comment": "一度の施工で終わらず、前年の体感を踏まえて追加施工につながった点が印象的な事例です。窓の方角や部屋の使い方に合わせて、段階的に施工範囲を広げる提案もしやすいケースです。",
+      "follow_up": "夏季の使用感を確認し、必要に応じて追加の窓対策や運用面の確認を行う予定です。",
+      "facility_image": "/assets/images/cases/chiryu-design-office-home/photo-2.jpg",
+      "facility_image_alt": "愛知県知立市の設計事務所兼二世帯住宅の外観",
+      "facility_image_caption": "設計事務所兼二世帯住宅 外観",
+      "facility_profile_text": "愛知県知立市の設計事務所兼二世帯住宅にて、1F事務所と2F住居部の窓へ段階的にDAMAGA Proを施工しました。前年の遮熱効果を実感いただき、翌年に2F子世帯部分へ追加施工した事例です。",
+      "main_image": "/assets/images/cases/chiryu-design-office-home/photo-2.jpg",
+      "images": [
+        {
+          "src": "/assets/images/cases/chiryu-design-office-home/photo-2.jpg",
+          "alt": "知立市の設計事務所兼二世帯住宅の外観",
+          "caption": "建物外観"
+        },
+        {
+          "src": "/assets/images/cases/chiryu-design-office-home/photo-8.jpg",
+          "alt": "設計事務所兼二世帯住宅の外観と施工対象窓",
+          "caption": "道路側から見た外観"
+        },
+        {
+          "src": "/assets/images/cases/chiryu-design-office-home/photo-7.jpg",
+          "alt": "中庭側から見た設計事務所兼二世帯住宅の窓",
+          "caption": "中庭側の窓"
+        },
+        {
+          "src": "/assets/images/cases/chiryu-design-office-home/photo-3.jpg",
+          "alt": "外階段側の窓に施工したDAMAGA Pro",
+          "caption": "外階段側の窓"
+        },
+        {
+          "src": "/assets/images/cases/chiryu-design-office-home/photo-4.jpg",
+          "alt": "1F事務所北西角部屋の施工対象窓",
+          "caption": "1F事務所の窓"
+        },
+        {
+          "src": "/assets/images/cases/chiryu-design-office-home/photo-10.jpg",
+          "alt": "2F住居部の窓に施工した遮熱フィルム",
+          "caption": "2F住居部の窓"
+        },
+        {
+          "src": "/assets/images/cases/chiryu-design-office-home/photo-11.jpg",
+          "alt": "窓から見える西日対策の施工箇所",
+          "caption": "窓からの眺望"
+        },
+        {
+          "src": "/assets/images/cases/chiryu-design-office-home/photo-12.jpg",
+          "alt": "2F角部屋の窓に施工したDAMAGA Pro",
+          "caption": "2F角部屋の窓"
+        },
+        {
+          "src": "/assets/images/cases/chiryu-design-office-home/photo-1.jpg",
+          "alt": "2F住居部の窓用遮熱フィルム施工箇所",
+          "caption": "2F住居部の窓"
+        },
+        {
+          "src": "/assets/images/cases/chiryu-design-office-home/photo-13.jpg",
+          "alt": "吹抜け付近の大きな窓に施工した遮熱フィルム",
+          "caption": "吹抜け付近の大窓"
+        }
+      ],
+      "title": "知立市の設計事務所兼二世帯住宅 施工事例｜DAMAGA Pro",
+      "meta_description": "愛知県知立市の設計事務所兼二世帯住宅でDAMAGA Proを段階施工。前年の遮熱効果を実感し、2F住居部へ追加施工した事例を紹介します。",
+      "published": true,
+      "updated": "2026-07-02"
+    },
+    {
+      "slug": "nisshin-minami-hospital",
+      "category": "hospital",
+      "facility_name": "医療法人宏生会 日進南病院",
+      "location": "愛知県日進市浅田平子3丁目320",
+      "installation_date": "2026年5月",
+      "installation_date_iso": "2026-05",
+      "interview_date": "2026年6月",
+      "area": "約423㎡",
+      "installation_locations": [
+        "病室",
+        "共用部",
+        "東側窓",
+        "南側窓"
+      ],
+      "product": "DAMAGA Pro",
+      "scale": "4フロア・1フロア約22室・合計約88室",
+      "summary": "病室と共用部の窓へ施工。スタッフの体感を伺うと、昨年との違いを率直な言葉で話してくださいました。",
+      "lead_quote": "すごく変わったよ",
+      "challenge": "昨年は同じ時期でもスタッフが汗をかくことがあり、室温上昇を抑えるためにカーテンを閉めていました。病室や共用部の窓から入る熱を抑えながら、日中の明るさも保ちたいという課題がありました。",
+      "installation": "4フロア、合計約88室の病室と共用部を対象に、東側・南側の窓へDAMAGA Proを施工しました。施工面積は約423㎡です。施設運営への影響を抑えながら、対象区画ごとに作業を進めました。",
+      "changes": "2026年6月のヒアリングでは、昨年は汗をかいていた時期に今年は特に汗をかいていないこと、カーテンを閉める必要がほとんどなくなったこと、患者さんの部屋でもエアコンを使用していないケースが多く見られること、スタッフから暑いという声が少なくなったことを伺いました。これらは担当者へのヒアリング時点での体感であり、気象条件や空調運用などによって変わります。",
+      "customer_voice": "施工後に感想を伺った際、最初にいただいた言葉は「すごく変わったよ」でした。\n\n「昨年はこの時期でもスタッフが汗をかいていました。今年は特に汗をかいていません。昨年は室温上昇を抑えるためにカーテンを閉めていましたが、今年は閉める必要がほとんどありません。患者さんの部屋でも、エアコンを使用していないケースが多く見られます。スタッフから暑いという声も少なくなりました」",
+      "our_comment": "数値だけでは伝わりにくい窓環境の変化を、日々現場で過ごす方の言葉で確認できたことが印象に残りました。今後も実際の運用状況を伺いながら、継続して記録します。",
+      "follow_up": "7〜8月の猛暑期間終了後に再度訪問し、追加レポートを掲載予定です。",
+      "facility_image": "/assets/images/cases/nisshin-minami-hospital/hospital-exterior.jpg",
+      "facility_image_alt": "医療法人宏生会 日進南病院の外観",
+      "facility_image_caption": "医療法人宏生会 日進南病院 外観",
+      "facility_profile_text": "愛知県日進市の日進南病院にて、病室・共用部の東側窓と南側窓へDAMAGA Proを施工しました。病院から掲載許可をいただき、実際の施設外観とともに導入後の体感を紹介しています。",
+      "main_image": "/assets/images/cases/nisshin-minami-hospital/hospital-exterior.jpg",
+      "images": [
+        {
+          "src": "/assets/images/cases/nisshin-minami-hospital/common-area.jpg",
+          "alt": "日進南病院の共用部に施工したDAMAGA Pro窓用遮熱フィルム",
+          "caption": "共用部の東側・南側窓"
+        },
+        {
+          "src": "/assets/images/cases/nisshin-minami-hospital/patient-room-1.jpg",
+          "alt": "日進南病院の病室窓に施工したDAMAGA Pro",
+          "caption": "病室の施工後"
+        },
+        {
+          "src": "/assets/images/cases/nisshin-minami-hospital/patient-room-2.jpg",
+          "alt": "病室の大きな窓へ施工した法人向け遮熱フィルム",
+          "caption": "病室から見た施工窓"
+        },
+        {
+          "src": "/assets/images/cases/nisshin-minami-hospital/window-1.jpg",
+          "alt": "日進南病院の窓用遮熱フィルム施工箇所",
+          "caption": "共用部の窓"
+        },
+        {
+          "src": "/assets/images/cases/nisshin-minami-hospital/window-2.jpg",
+          "alt": "東側窓に施工したDAMAGA Pro遮熱フィルム",
+          "caption": "東側の施工窓"
+        },
+        {
+          "src": "/assets/images/cases/nisshin-minami-hospital/patient-room-3.jpg",
+          "alt": "日進南病院の患者室に施工した窓用遮熱フィルム",
+          "caption": "患者室の施工後"
+        }
+      ],
+      "title": "日進南病院の窓用遮熱フィルム施工事例｜DAMAGA Pro",
+      "meta_description": "愛知県日進市の日進南病院で約423㎡の窓へDAMAGA Proを施工。『すごく変わったよ』という担当者の声と、カーテンや暑さの体感に関する変化を紹介します。",
+      "published": true,
+      "updated": "2026-06-25"
+    },
+    {
+      "slug": "aichi-private-home-202508",
+      "category": "residential",
+      "facility_name": "愛知県安城市 個人宅",
+      "location": "愛知県安城市",
+      "installation_date": "2025年8月15日",
+      "installation_date_iso": "2025-08-15",
+      "interview_date": "2026年7月",
+      "area": "計24㎡（南向き側21㎡・北面3㎡）",
+      "installation_locations": [
+        "庭に面した母屋の南向き側1F・2F",
+        "2F西面",
+        "北面1F・2F（防犯・飛散防止用）"
+      ],
+      "product": "DAMAGA Pro",
+      "scale": "個人宅",
+      "summary": "庭に面した母屋の南向き側と北面へ施工。景観を損ねにくい窓対策として、夏の暑さ・家具の日焼け・冬の結露対策に活用いただいた個人宅の事例です。",
+      "lead_quote": "景観を損ねることなく、夏の暑さはかなり抑えられたと実感しています",
+      "challenge": "これまでは夏の日除けや熱対策、廊下や家具の日焼け対策として葦簀を立て掛けたり、ガラスフィルムを貼付したりしていましたが、数年で劣化して交換が必要でした。庭の景観を楽しみにくいこともあり、冬は結露にも悩まされていました。プチプチやスポンジ状のものを窓に貼っても大きな効果は感じにくく、1シーズン止まりでした。",
+      "installation": "2025年8月15日に、庭に面した母屋の南向き側1F・2Fおよび2F西面へ21㎡、北面の1F・2Fへ防犯・飛散防止用として3㎡を施工しました。施工面積は合計24㎡です。窓からの眺望をできるだけ保ちながら、暑さ、日焼け、結露、飛散防止への備えを目的に施工範囲を整理しました。",
+      "changes": "DAMAGAシートを貼ることで庭の景観を損ねにくく、夏の暑さがかなり抑えられたと実感いただきました。施工直後からエアコンの効きが良くなったように感じられ、冬も断熱効果があるようだとの声をいただいています。特に結露は非常に少なくなり、以前のように窓がびしょびしょになる状態から、シート表面に細かな水滴が付く程度で済むようになったため、掃除が楽になったとのことです。効果は方角、窓面積、日射条件、湿度、空調運用により異なります。",
+      "customer_voice": "今までは、夏の日除けや熱、廊下や家具の日焼け対策として葦簀を立て掛けたり、ガラスフィルムを貼付などしましたが、数年で劣化して交換をしてきました。これらは庭の景観を楽しめないこともありました。\n\nまた、冬は結露に悩まされていました。プチプチを貼ったり、スポンジのような物を窓に貼ったりしましたが、それほど効果もなく、これらも1シーズン止まりでした。\n\nDAMAGAシートを貼っていただき、景観を損ねることなく、とにかく夏の暑さはかなり抑えられたと実感してます。昨年夏に施工した直後から、エアコンの効きが良くなった感じです。\n\n冬も断熱効果があるようです。特に、結露が非常に少なくなりました。今までなら結露で窓がびしょびしょだったのが、シートの表面に細かい粒々の水滴が付く程度で済んで、とても掃除が楽になりました。",
+      "our_comment": "葦簀や簡易的な断熱材では景観や耐久性に課題が出やすい住まいで、透明性を保ちながら暑さ・日焼け・結露の悩みに対応した事例です。南向きの大きな窓と、防犯・飛散防止を意識した北面の窓を分けて施工範囲を整理しました。法人施設でも、眺望を保ちたい待合室、食堂、廊下、居室などで同様の考え方が参考になります。",
+      "follow_up": "夏季と冬季の使用感を確認し、必要に応じて追加の窓対策や運用面の確認を行う予定です。",
+      "facility_image": "/assets/images/cases/aichi-private-home-202508/exterior.jpg",
+      "facility_image_alt": "愛知県安城市の個人宅外観と施工対象の窓",
+      "facility_image_caption": "個人宅 外観",
+      "facility_profile_text": "愛知県安城市の個人宅にて、庭に面した母屋の南向き側と北面の窓へDAMAGA Proを施工しました。夏の暑さ対策、廊下や家具の日焼け対策、冬の結露対策を目的とした事例です。",
+      "main_image": "/assets/images/cases/aichi-private-home-202508/exterior.jpg",
+      "images": [
+        {
+          "src": "/assets/images/cases/aichi-private-home-202508/exterior.jpg",
+          "alt": "愛知県安城市の個人宅外観とDAMAGA Pro施工対象窓",
+          "caption": "建物外観"
+        },
+        {
+          "src": "/assets/images/cases/aichi-private-home-202508/exterior-left-angle.jpg",
+          "alt": "愛知県安城市の個人宅玄関側から見た施工対象窓",
+          "caption": "玄関側から見た外観"
+        },
+        {
+          "src": "/assets/images/cases/aichi-private-home-202508/garden-side-windows.jpg",
+          "alt": "庭に面した南向き側の大きな窓",
+          "caption": "庭に面した南向き側の窓"
+        },
+        {
+          "src": "/assets/images/cases/aichi-private-home-202508/interior-garden-view.jpg",
+          "alt": "室内から庭を望む施工後の窓",
+          "caption": "室内から見た庭の眺望"
+        },
+        {
+          "src": "/assets/images/cases/aichi-private-home-202508/south-window-view.jpg",
+          "alt": "施工後の窓越しに見える庭の景観",
+          "caption": "景観を保った窓まわり"
+        },
+        {
+          "src": "/assets/images/cases/aichi-private-home-202508/garden-through-film.jpg",
+          "alt": "DAMAGA Pro施工後の窓越しに見える庭",
+          "caption": "窓越しの庭の見え方"
+        },
+        {
+          "src": "/assets/images/cases/aichi-private-home-202508/garden-view-wide.jpg",
+          "alt": "施工後の窓越しに庭全体を見渡した様子",
+          "caption": "窓越しに見える庭全体"
+        },
+        {
+          "src": "/assets/images/cases/aichi-private-home-202508/north-window-room.jpg",
+          "alt": "北面の窓に施工した飛散防止目的のDAMAGA Pro",
+          "caption": "北面1Fの施工窓"
+        },
+        {
+          "src": "/assets/images/cases/aichi-private-home-202508/north-window-wide.jpg",
+          "alt": "和室側から見た北面の施工窓",
+          "caption": "和室側から見た北面窓"
+        },
+        {
+          "src": "/assets/images/cases/aichi-private-home-202508/interior-garden-front.jpg",
+          "alt": "室内正面から庭を望む施工後の窓",
+          "caption": "室内正面からの庭の眺望"
+        },
+        {
+          "src": "/assets/images/cases/aichi-private-home-202508/garden-and-yoshizu.jpg",
+          "alt": "葦簀と庭が見える室内の施工対象窓",
+          "caption": "既存の日除けと庭側の窓"
+        },
+        {
+          "src": "/assets/images/cases/aichi-private-home-202508/north-window-close.jpg",
+          "alt": "北面窓の施工後の近景",
+          "caption": "北面窓の近景"
+        }
+      ],
+      "title": "愛知県安城市の個人宅 施工事例｜暑さ・日焼け・結露対策｜DAMAGA Pro",
+      "meta_description": "愛知県安城市の個人宅でDAMAGA Proを計24㎡施工。庭の景観を損ねにくい窓対策として、夏の暑さや日焼け、冬の結露対策に活用した事例を紹介します。",
+      "published": true,
+      "updated": "2026-07-02"
+    }
+  ]
+}
