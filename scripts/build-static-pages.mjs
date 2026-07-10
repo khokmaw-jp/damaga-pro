@@ -460,6 +460,39 @@ ${urls.map(([loc, changefreq, priority]) => `  <url>
   writeFile('sitemap.xml', xml);
 }
 
+function copyForVercelOutput() {
+  const outputDir = path.join(root, 'public');
+  const entries = [
+    'index.html',
+    'privacy.html',
+    'robots.txt',
+    'sitemap.xml',
+    'llms.txt',
+    'ai-data.json',
+    'favicon.ico',
+    'site.webmanifest',
+    'assets',
+    'image-library',
+    'faq',
+    'case',
+  ];
+
+  fs.rmSync(outputDir, { recursive: true, force: true });
+  fs.mkdirSync(outputDir, { recursive: true });
+
+  for (const entry of entries) {
+    const source = path.join(root, entry);
+    if (!fs.existsSync(source)) continue;
+    fs.cpSync(source, path.join(outputDir, entry), {
+      recursive: true,
+      filter: (sourcePath) => {
+        const segments = path.relative(root, sourcePath).split(path.sep);
+        return !segments.includes('admin') && !segments.includes('data');
+      },
+    });
+  }
+}
+
 const requiredDataFiles = ['faq/data/faqs.json', 'case/data/cases.json'];
 const hasRequiredData = requiredDataFiles.every((file) => fs.existsSync(path.join(root, file)));
 
@@ -470,4 +503,9 @@ if (hasRequiredData) {
   console.log(`Generated ${faqCount} FAQ pages and ${caseCount} case pages.`);
 } else {
   console.log('FAQ/case source data is not included in this deployment. Using prebuilt static pages.');
+}
+
+if (process.env.VERCEL === '1') {
+  copyForVercelOutput();
+  console.log('Copied static site files to public/ for Vercel output.');
 }
