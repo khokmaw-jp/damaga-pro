@@ -460,7 +460,7 @@ ${urls.map(([loc, changefreq, priority]) => `  <url>
   writeFile('sitemap.xml', xml);
 }
 
-function copyForVercelOutput() {
+function copyForStaticHostOutput() {
   const outputDir = path.join(root, 'public');
   const entries = [
     'index.html',
@@ -471,6 +471,8 @@ function copyForVercelOutput() {
     'ai-data.json',
     'favicon.ico',
     'site.webmanifest',
+    '_headers',
+    '_redirects',
     'assets',
     'image-library',
     'faq',
@@ -505,7 +507,7 @@ if (hasRequiredData) {
   console.log('FAQ/case source data is not included in this deployment. Using prebuilt static pages.');
 }
 
-if (process.env.VERCEL === '1') {
-  copyForVercelOutput();
-  console.log('Copied static site files to public/ for Vercel output.');
+if (process.env.CLOUDFLARE_PAGES === '1' || process.env.VERCEL === '1') {
+  copyForStaticHostOutput();
+  console.log('Copied static site files to public/ for static host output.');
 }

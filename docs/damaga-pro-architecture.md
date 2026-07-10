@@ -37,27 +37,27 @@ damaga-pro.jp
 
 | 用途 | URL | 管理方針 |
 | --- | --- | --- |
-| 公開サイト | https://damaga-pro.jp/ | Vercelでホスティング |
+| 公開サイト | https://damaga-pro.jp/ | Cloudflare Pagesでホスティング |
 | www | https://www.damaga-pro.jp/ | damaga-pro.jpへ301リダイレクト |
-| 代理店システム | https://partner.damaga-pro.jp/ | Vercelで別アプリとして管理 |
+| 代理店システム | https://partner.damaga-pro.jp/ | サブドメインで別アプリとして管理 |
 
-ドメインの取得・更新はお名前.comで継続する。DNSはCloudflareへ移管し、Vercelへ向ける。
+ドメインの取得・更新はお名前.comで継続する。DNSはCloudflareへ移管し、Cloudflare Pagesへ向ける。
 
 ## 4. 技術構成
 
 | 項目 | 方針 |
 | --- | --- |
 | ソース管理 | GitHub |
-| 公開サイト | 現在は静的HTML/PHP由来のサイトをVercel配信。将来的にNext.jsへ移行 |
+| 公開サイト | 静的HTML/PHP由来のサイトをCloudflare Pages配信。将来的にNext.jsへ移行 |
 | 代理店システム | Next.js |
-| ホスティング | Vercel |
+| ホスティング | Cloudflare Pages |
 | DNS / セキュリティ | Cloudflare |
 | フォーム保護 | Cloudflare Turnstile |
 | データベース | Supabase または Neon |
 | 認証 | Supabase Auth、または NextAuth/Auth.js |
-| 画像管理 | CMS管理、またはVercel Blob/Supabase Storage |
+| 画像管理 | CMS管理、またはCloudflare R2/Supabase Storage |
 
-第一候補は Next.js + Supabase + Vercel + Cloudflare とする。
+第一候補は Next.js + Supabase + Cloudflare Pages とする。
 
 ## 5. 公開サイト
 
@@ -232,7 +232,7 @@ announcements
 
 詳細なカラム設計は、Next.js移行時に別紙 `cms-design.md` または `database-schema.md` として作成する。
 
-## 11. GitHub / Vercel / Cloudflare 方針
+## 11. GitHub / Cloudflare Pages 方針
 
 GitHub:
 
@@ -240,18 +240,20 @@ GitHub:
 - 設計書管理
 - 変更履歴管理
 
-Vercel:
+Cloudflare Pages:
 
 - GitHub連携による自動デプロイ
 - 公開サイトと代理店システムを別プロジェクトで管理
-- 環境変数をVercel側に設定
+- 環境変数をCloudflare Pages側に設定
+- Pages Functionsで問い合わせAPIを運用
 
 Cloudflare:
 
 - DNS管理
 - Turnstile
 - WAF
-- 必要に応じてキャッシュ制御
+- CDN
+- キャッシュ制御
 
 お名前.com:
 
@@ -262,12 +264,12 @@ Cloudflare:
 1. 現行サイトをバックアップ
 2. GitHubリポジトリを作成
 3. 現行HTML/PHPサイトをGitHubへ登録
-4. Next.js版公開サイトの雛形を作成
+4. Cloudflare Pagesプロジェクトを作成
 5. FAQと導入実績のデータをCMS構造へ移行
-6. 問い合わせフォームをNext.js/Vercel向けに移行
+6. 問い合わせフォームをPages Functions向けに移行
 7. 代理店システムを `partner.damaga-pro.jp` として構築
 8. シミュレーション保存機能を実装
-9. Vercelに接続
+9. Cloudflare Pagesに接続
 10. Cloudflare DNSを設定
 11. 本番切り替え
 12. Google Search Consoleでsitemap.xmlを確認

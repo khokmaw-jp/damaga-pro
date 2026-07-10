@@ -6,11 +6,13 @@ const RESEND_EMAIL_URL = "https://api.resend.com/emails";
 const PRODUCTION_HOSTNAMES = new Set(["damaga-pro.jp", "www.damaga-pro.jp"]);
 const LOCAL_HOSTNAMES = new Set(["localhost", "127.0.0.1", "::1"]);
 
-const json = (res, status, payload) => {
-  res.setHeader("Cache-Control", "no-store");
-  res.setHeader("Content-Type", "application/json; charset=utf-8");
-  return res.status(status).json(payload);
-};
+const json = (payload, status = 200, headers = {}) => Response.json(payload, {
+  status,
+  headers: {
+    "Cache-Control": "no-store",
+    ...headers,
+  },
+});
 
 const cleanField = (value = "", maxLength = 1000) => String(value)
   .trim()
@@ -19,27 +21,29 @@ const cleanField = (value = "", maxLength = 1000) => String(value)
 
 const truncateText = (value = "", maxLength = 3000) => String(value).trim().slice(0, maxLength);
 
-const getClientIp = (req) => {
-  const cfIp = req.headers["cf-connecting-ip"];
-  if (typeof cfIp === "string" && cfIp.trim()) return cfIp.trim();
+const getClientIp = (request) => {
+  const cfIp = request.headers.get("CF-Connecting-IP");
+  if (cfIp && cfIp.trim()) return cfIp.trim();
 
-  const forwardedFor = req.headers["x-forwarded-for"];
-  if (typeof forwardedFor === "string" && forwardedFor.trim()) {
+  const forwardedFor = request.headers.get("X-Forwarded-For");
+  if (forwardedFor && forwardedFor.trim()) {
     return forwardedFor.split(",")[0].trim();
   }
 
   return "";
 };
 
-const isAllowedHostname = (hostname) => {
+const isAllowedHostname = (hostname, request) => {
   if (!hostname) return false;
   if (PRODUCTION_HOSTNAMES.has(hostname)) return true;
-  if (process.env.NODE_ENV !== "production" && LOCAL_HOSTNAMES.has(hostname)) return true;
-  return false;
+
+  const requestHost = new URL(request.url).hostname;
+  const isLocalRequest = LOCAL_HOSTNAMES.has(requestHost);
+  return isLocalRequest && LOCAL_HOSTNAMES.has(hostname);
 };
 
-const verifyTurnstile = async ({ token, remoteIp }) => {
-  const secret = process.env.TURNSTILE_SECRET_KEY || "";
+const verifyTurnstile = async ({ env, request, token, remoteIp }) => {
+  const secret = env.TURNSTILE_SECRET_KEY || "";
   if (!secret || !token) {
     return {
       ok: false,
@@ -66,7 +70,7 @@ const verifyTurnstile = async ({ token, remoteIp }) => {
   const errorCodes = Array.isArray(result["error-codes"]) ? result["error-codes"] : [];
 
   return {
-    ok: success && isAllowedHostname(hostname),
+    ok: success && isAllowedHostname(hostname, request),
     notConfigured: false,
     result: {
       success,
@@ -76,8 +80,8 @@ const verifyTurnstile = async ({ token, remoteIp }) => {
   };
 };
 
-const sendResendEmail = async ({ to, from, replyTo, subject, text }) => {
-  const apiKey = process.env.RESEND_API_KEY || "";
+const sendResendEmail = async ({ env, to, from, replyTo, subject, text }) => {
+  const apiKey = env.RESEND_API_KEY || "";
   if (!apiKey) return false;
 
   const response = await fetch(RESEND_EMAIL_URL, {
@@ -98,35 +102,33 @@ const sendResendEmail = async ({ to, from, replyTo, subject, text }) => {
   return response.ok;
 };
 
-export default async function handler(req, res) {
-  if (req.method !== "POST") {
-    res.setHeader("Allow", "POST");
-    return json(res, 405, { success: false, message: "許可されていない送信方法です。" });
-  }
-
-  const fields = req.body || {};
+const handlePost = async ({ request, env }) => {
+  const formData = await request.formData();
+  const fields = Object.fromEntries(formData.entries());
   const token = String(fields["cf-turnstile-response"] || "");
 
   let verification;
   try {
     verification = await verifyTurnstile({
+      env,
+      request,
       token,
-      remoteIp: getClientIp(req),
+      remoteIp: getClientIp(request),
     });
   } catch (error) {
-    return json(res, 400, { success: false, message: TURNSTILE_ERROR_MESSAGE });
+    return json({ success: false, message: TURNSTILE_ERROR_MESSAGE }, 400);
   }
 
   if (verification.notConfigured) {
-    return json(res, 503, { success: false, message: TURNSTILE_NOT_CONFIGURED_MESSAGE });
+    return json({ success: false, message: TURNSTILE_NOT_CONFIGURED_MESSAGE }, 503);
   }
 
   if (!verification.ok) {
-    return json(res, 400, {
+    return json({
       success: false,
       message: TURNSTILE_ERROR_MESSAGE,
       turnstile: verification.result,
-    });
+    }, 400);
   }
 
   const type = cleanField(fields.type, 80);
@@ -138,11 +140,11 @@ export default async function handler(req, res) {
   const emailIsValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
   if (!type || !company || !name || !emailIsValid) {
-    return json(res, 422, { success: false, message: "必須項目を確認してください。" });
+    return json({ success: false, message: "必須項目を確認してください。" }, 422);
   }
 
-  const to = process.env.CONTACT_TO_EMAIL || "info@damaga-pro.jp";
-  const from = process.env.CONTACT_FROM_EMAIL || "DAMAGA Pro <no-reply@damaga-pro.jp>";
+  const to = env.CONTACT_TO_EMAIL || "info@damaga-pro.jp";
+  const from = env.CONTACT_FROM_EMAIL || "DAMAGA Pro <no-reply@damaga-pro.jp>";
   const adminSubject = "【DAMAGA Pro】お問い合わせ";
   const adminBody = [
     "DAMAGA Proサイトからお問い合わせがありました。",
@@ -184,6 +186,7 @@ export default async function handler(req, res) {
   ].join("\n");
 
   const adminSent = await sendResendEmail({
+    env,
     to,
     from,
     replyTo: email,
@@ -192,10 +195,11 @@ export default async function handler(req, res) {
   });
 
   if (!adminSent) {
-    return json(res, 500, { success: false, message: MAIL_NOT_CONFIGURED_MESSAGE });
+    return json({ success: false, message: MAIL_NOT_CONFIGURED_MESSAGE }, 500);
   }
 
   const autoReplySent = await sendResendEmail({
+    env,
     to: email,
     from,
     replyTo: to,
@@ -204,8 +208,20 @@ export default async function handler(req, res) {
   });
 
   if (!autoReplySent) {
-    return json(res, 500, { success: false, message: "自動返信メールの送信に失敗しました。時間をおいて再度お試しください。" });
+    return json({ success: false, message: "自動返信メールの送信に失敗しました。時間をおいて再度お試しください。" }, 500);
   }
 
-  return json(res, 200, { success: true });
-}
+  return json({ success: true });
+};
+
+export const onRequest = (context) => {
+  if (context.request.method === "POST") {
+    return handlePost(context);
+  }
+
+  return json(
+    { success: false, message: "許可されていない送信方法です。" },
+    405,
+    { "Allow": "POST" },
+  );
+};
