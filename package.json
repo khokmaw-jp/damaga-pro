@@ -1,0 +1,8 @@
+{
+  "type": "module",
+  "scripts": {
+    "lint": "node --check api/contact.js && node --check api/turnstile-config.js && node --check assets/js/main.js && node --check scripts/build-static-pages.mjs",
+    "build": "node scripts/build-static-pages.mjs"
+  },
+  "devDependencies": {}
+}

@@ -1,6 +1,6 @@
 **/*.php
 **/.htaccess
-api/
+api/*.php
 faq/admin/
 faq/data/
 case/admin/

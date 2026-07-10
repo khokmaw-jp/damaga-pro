@@ -62,6 +62,7 @@ document.querySelectorAll("[data-contact-type]").forEach((link) => {
 const contactForm = document.querySelector("[data-contact-form]");
 const turnstileContainer = document.querySelector("[data-turnstile-widget]");
 let turnstileWidgetId = null;
+let turnstileIsConfigured = false;
 
 if (contactForm) {
   try {
@@ -85,11 +86,17 @@ const setFormStatus = (message, isError = false) => {
   status.classList.toggle("is-error", isError);
 };
 
+const setContactSubmitEnabled = (enabled) => {
+  const submitButton = contactForm?.querySelector("[type='submit']");
+  if (submitButton) submitButton.disabled = !enabled;
+};
+
 const renderTurnstile = async () => {
   if (!contactForm || !turnstileContainer) return;
+  setContactSubmitEnabled(false);
 
   try {
-    const response = await fetch("api/turnstile-config.php", {
+    const response = await fetch("/api/turnstile-config", {
       headers: { "Accept": "application/json" },
       cache: "no-store"
     });
@@ -98,6 +105,7 @@ const renderTurnstile = async () => {
 
     if (!siteKey) {
       turnstileContainer.innerHTML = "<p>セキュリティ確認の設定が未完了です。</p>";
+      turnstileIsConfigured = false;
       return;
     }
 
@@ -118,8 +126,12 @@ const renderTurnstile = async () => {
     await waitForTurnstile();
     turnstileContainer.innerHTML = "";
     turnstileWidgetId = window.turnstile.render(turnstileContainer, { sitekey: siteKey });
+    turnstileIsConfigured = true;
+    setContactSubmitEnabled(true);
   } catch (error) {
     turnstileContainer.innerHTML = "<p>セキュリティ確認を読み込めませんでした。時間をおいて再度お試しください。</p>";
+    turnstileIsConfigured = false;
+    setContactSubmitEnabled(false);
   }
 };
 
@@ -130,14 +142,23 @@ contactForm?.addEventListener("submit", async (event) => {
   const form = event.currentTarget;
   const submitButton = form.querySelector("[type='submit']");
 
+  if (!turnstileIsConfigured || !window.turnstile || turnstileWidgetId === null) {
+    setFormStatus("セキュリティ確認の設定が未完了です。", true);
+    return;
+  }
+
   setFormStatus("送信中です。しばらくお待ちください。");
   submitButton.disabled = true;
 
   try {
+    const formData = new FormData(form);
     const response = await fetch(form.action, {
       method: "POST",
-      body: new FormData(form),
-      headers: { "Accept": "application/json" }
+      body: new URLSearchParams(formData),
+      headers: {
+        "Accept": "application/json",
+        "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"
+      }
     });
     const result = await response.json().catch(() => ({}));
 
