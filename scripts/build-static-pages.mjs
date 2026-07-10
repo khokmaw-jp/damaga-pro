@@ -460,7 +460,14 @@ ${urls.map(([loc, changefreq, priority]) => `  <url>
   writeFile('sitemap.xml', xml);
 }
 
-const faqCount = buildFaq();
-const caseCount = buildCase();
-buildSitemap();
-console.log(`Generated ${faqCount} FAQ pages and ${caseCount} case pages.`);
+const requiredDataFiles = ['faq/data/faqs.json', 'case/data/cases.json'];
+const hasRequiredData = requiredDataFiles.every((file) => fs.existsSync(path.join(root, file)));
+
+if (hasRequiredData) {
+  const faqCount = buildFaq();
+  const caseCount = buildCase();
+  buildSitemap();
+  console.log(`Generated ${faqCount} FAQ pages and ${caseCount} case pages.`);
+} else {
+  console.log('FAQ/case source data is not included in this deployment. Using prebuilt static pages.');
+}
