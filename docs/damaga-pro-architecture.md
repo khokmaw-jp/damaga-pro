@@ -38,7 +38,7 @@ damaga-pro.jp
 | 用途 | URL | 管理方針 |
 | --- | --- | --- |
 | 公開サイト | https://damaga-pro.jp/ | Vercelでホスティング |
-| www | https://www.damaga-pro.jp/ | damaga-pro.jpへリダイレクト、または同一表示 |
+| www | https://www.damaga-pro.jp/ | damaga-pro.jpへ301リダイレクト |
 | 代理店システム | https://partner.damaga-pro.jp/ | Vercelで別アプリとして管理 |
 
 ドメインの取得・更新はお名前.comで継続する。DNSはCloudflareへ移管し、Vercelへ向ける。
@@ -48,7 +48,7 @@ damaga-pro.jp
 | 項目 | 方針 |
 | --- | --- |
 | ソース管理 | GitHub |
-| 公開サイト | Next.js |
+| 公開サイト | 現在は静的HTML/PHP由来のサイトをVercel配信。将来的にNext.jsへ移行 |
 | 代理店システム | Next.js |
 | ホスティング | Vercel |
 | DNS / セキュリティ | Cloudflare |
