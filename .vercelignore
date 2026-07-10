@@ -1,0 +1,7 @@
+**/*.php
+**/.htaccess
+api/
+faq/admin/
+faq/data/
+case/admin/
+case/data/
