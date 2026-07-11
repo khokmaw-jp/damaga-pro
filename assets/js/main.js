@@ -54,10 +54,25 @@ document.querySelector("[data-login-form]")?.addEventListener("submit", (event) 
 
 document.querySelector("[data-partner-login-form]")?.addEventListener("submit", (event) => {
   event.preventDefault();
+  const form = event.currentTarget;
   const status = document.querySelector("[data-partner-login-status]");
-  if (status) {
-    status.textContent = "代理店システムは現在準備中です。アカウント発行をご希望の方はお問い合わせください。";
+
+  if (!(form instanceof HTMLFormElement) || !status) {
+    return;
   }
+
+  const formData = new FormData(form);
+  const partnerId = String(formData.get("partnerId") || "").trim().toUpperCase();
+  const password = String(formData.get("partnerPassword") || "");
+
+  if (partnerId === "FV-DMG-0000" && password === "demo") {
+    status.textContent = "テストログインを確認しました。現在は代理店システムの画面確認用です。";
+    status.classList.remove("is-error");
+    return;
+  }
+
+  status.textContent = "テスト用IDは FV-DMG-0000、パスワードは demo です。本番アカウントはお問い合わせください。";
+  status.classList.add("is-error");
 });
 
 document.querySelectorAll("[data-contact-type]").forEach((link) => {

@@ -637,6 +637,15 @@ button { cursor: pointer; }
   background: #f3f7f4;
 }
 
+.partner-test-note {
+  margin-top: 14px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: rgba(137, 203, 71, .12);
+  color: var(--green-900);
+  font-size: .82rem;
+}
+
 .partner-system {
   background: #fff;
 }

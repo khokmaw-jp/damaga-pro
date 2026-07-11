@@ -66,13 +66,14 @@
         <aside class="partner-login-card reveal" aria-label="代理店ログイン">
           <small>PARTNER SIGN IN</small>
           <h2>代理店ログイン</h2>
-          <p>現在、契約代理店様向けアカウント発行の準備中です。ログイン情報をお持ちでない方は、お問い合わせください。</p>
+          <p>現在、契約代理店様向けアカウント発行の準備中です。テスト確認用として、代理店ID <b>FV-DMG-0000</b> をご利用いただけます。</p>
           <form data-partner-login-form>
-            <label>代理店ID<input type="text" autocomplete="username" placeholder="FV-DMG-0001" disabled></label>
-            <label>パスワード<input type="password" autocomplete="current-password" placeholder="準備中" disabled></label>
+            <label>代理店ID<input type="text" name="partnerId" autocomplete="username" value="FV-DMG-0000" placeholder="FV-DMG-0000"></label>
+            <label>パスワード<input type="password" name="partnerPassword" autocomplete="current-password" placeholder="demo"></label>
             <button class="button button-primary" type="submit">ログイン</button>
             <p class="form-status" role="status" data-partner-login-status></p>
           </form>
+          <p class="partner-test-note">テスト用パスワードは <b>demo</b> です。現在は画面確認用のため、本番の資料閲覧や注文機能はまだ有効ではありません。</p>
         </aside>
       </div>
     </section>
@@ -98,7 +99,7 @@
     <section class="partner-preview-section">
       <div class="container partner-preview-grid">
         <div class="portal-preview reveal">
-          <div class="portal-top"><span>DAMAGA Pro / PARTNER</span><b>FV-DMG-0001</b></div>
+          <div class="portal-top"><span>DAMAGA Pro / PARTNER</span><b>FV-DMG-0000</b></div>
           <div class="portal-body">
             <div class="portal-side"><b>マイページ</b><span>資料</span><span>試算</span><span>見積</span><span>注文</span><span>サポート</span></div>
             <div class="portal-content">
