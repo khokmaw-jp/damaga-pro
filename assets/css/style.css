@@ -565,17 +565,22 @@ button { cursor: pointer; }
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: 1.05fr .95fr;
+  grid-template-columns: minmax(0, 1.12fr) minmax(420px, .88fr);
   gap: 48px;
   align-items: center;
 }
 
 .partner-hero h1 {
   margin: 14px 0 24px;
-  max-width: 780px;
-  font-size: clamp(2.4rem, 6.4vw, 5.7rem);
-  line-height: 1.08;
-  letter-spacing: -.08em;
+  max-width: 850px;
+  font-size: clamp(2.8rem, 5.2vw, 5rem);
+  line-height: 1.13;
+  letter-spacing: -.07em;
+}
+
+.partner-hero h1 span {
+  display: block;
+  white-space: nowrap;
 }
 
 .partner-hero-copy > p:not(.eyebrow) {
@@ -722,6 +727,10 @@ button { cursor: pointer; }
 @media (max-width: 620px) {
   .partner-hero h1 {
     font-size: clamp(2.35rem, 13vw, 3.4rem);
+  }
+
+  .partner-hero h1 span {
+    white-space: normal;
   }
 
   .partner-hero-actions {
