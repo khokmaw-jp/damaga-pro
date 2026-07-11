@@ -52,6 +52,14 @@ document.querySelector("[data-login-form]")?.addEventListener("submit", (event) 
   document.querySelector("[data-login-status]").textContent = "デモ画面のため、ログイン機能は現在準備中です。";
 });
 
+document.querySelector("[data-partner-login-form]")?.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const status = document.querySelector("[data-partner-login-status]");
+  if (status) {
+    status.textContent = "代理店システムは現在準備中です。アカウント発行をご希望の方はお問い合わせください。";
+  }
+});
+
 document.querySelectorAll("[data-contact-type]").forEach((link) => {
   link.addEventListener("click", () => {
     const select = document.querySelector('select[name="type"]');

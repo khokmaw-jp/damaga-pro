@@ -88,13 +88,13 @@ const faqHeader = ({ title, description, canonical, structuredData }) => `<!doct
         <a href="/faq/" aria-current="page">FAQ</a>
       </nav>
       <div class="header-actions">
-        <a class="dealer-login-link" href="/?dealer-login=1">代理店ログイン</a>
+        <a class="dealer-login-link" href="/partner/">代理店ログイン</a>
         <a class="button button-small button-primary" href="/#contact">無料相談</a>
         <button class="menu-button" type="button" aria-label="メニューを開く" aria-expanded="false" data-menu-button><span></span><span></span><span></span></button>
       </div>
     </div>
     <nav class="mobile-nav" aria-label="モバイルナビゲーション" data-mobile-nav>
-      <a href="/">トップ</a><a href="/#about">製品情報</a><a href="/#simulation">導入効果</a><a href="/case/">導入実績</a><a href="/#comparison">比較</a><a href="/#dealer">代理店募集</a><a href="/faq/">FAQ</a><a href="/?dealer-login=1">代理店ログイン</a><a href="/#contact">お問い合わせ</a>
+      <a href="/">トップ</a><a href="/#about">製品情報</a><a href="/#simulation">導入効果</a><a href="/case/">導入実績</a><a href="/#comparison">比較</a><a href="/#dealer">代理店募集</a><a href="/faq/">FAQ</a><a href="/partner/">代理店ログイン</a><a href="/#contact">お問い合わせ</a>
     </nav>
   </header>`;
 
@@ -147,9 +147,9 @@ const caseHeader = ({ title, description, canonical, structuredData, ogImage = `
       <nav class="desktop-nav" aria-label="メインナビゲーション">
         <a href="/#about">製品情報</a><a href="/#simulation">導入効果</a><a href="/case/" aria-current="page">導入実績</a><a href="/#comparison">比較</a><a href="/#dealer">代理店募集</a><a href="/faq/">FAQ</a>
       </nav>
-      <div class="header-actions"><a class="dealer-login-link" href="/?dealer-login=1">代理店ログイン</a><a class="button button-small button-primary" href="/#contact">無料相談</a><button class="menu-button" type="button" aria-label="メニューを開く" aria-expanded="false" data-menu-button><span></span><span></span><span></span></button></div>
+      <div class="header-actions"><a class="dealer-login-link" href="/partner/">代理店ログイン</a><a class="button button-small button-primary" href="/#contact">無料相談</a><button class="menu-button" type="button" aria-label="メニューを開く" aria-expanded="false" data-menu-button><span></span><span></span><span></span></button></div>
     </div>
-    <nav class="mobile-nav" aria-label="モバイルナビゲーション" data-mobile-nav><a href="/">トップ</a><a href="/#about">製品情報</a><a href="/#simulation">導入効果</a><a href="/case/">導入実績</a><a href="/#comparison">比較</a><a href="/#dealer">代理店募集</a><a href="/faq/">FAQ</a><a href="/?dealer-login=1">代理店ログイン</a><a href="/#contact">お問い合わせ</a></nav>
+    <nav class="mobile-nav" aria-label="モバイルナビゲーション" data-mobile-nav><a href="/">トップ</a><a href="/#about">製品情報</a><a href="/#simulation">導入効果</a><a href="/case/">導入実績</a><a href="/#comparison">比較</a><a href="/#dealer">代理店募集</a><a href="/faq/">FAQ</a><a href="/partner/">代理店ログイン</a><a href="/#contact">お問い合わせ</a></nav>
   </header>`;
 
 const caseFooter = `  <footer class="site-footer">
@@ -445,6 +445,7 @@ function buildSitemap() {
     [`${siteUrl}/privacy.html`, 'monthly', '0.3'],
     [`${siteUrl}/faq/`, 'weekly', '0.8'],
     [`${siteUrl}/case/`, 'weekly', '0.9'],
+    [`${siteUrl}/partner/`, 'monthly', '0.6'],
     ...faqItems.map((item) => [`${siteUrl}/faq/${item.slug}/`, 'monthly', '0.7']),
     ...caseItems.map((item) => [`${siteUrl}/case/${item.slug}/`, 'monthly', '0.8']),
   ];
@@ -477,6 +478,7 @@ function copyForStaticHostOutput() {
     'image-library',
     'faq',
     'case',
+    'partner',
   ];
 
   fs.rmSync(outputDir, { recursive: true, force: true });
