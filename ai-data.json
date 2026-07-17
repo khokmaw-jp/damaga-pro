@@ -52,10 +52,10 @@
   ],
   "business_policy": {
     "dealer_recruitment": true,
-    "main_business": "代理店向け卸販売",
-    "direct_sales_to_general_users": false
+    "main_business": "直販・代理店販売",
+    "direct_sales_to_general_users": true
   },
-  "sales_policy": "株式会社ファンビータは卸販売を基本とし、一般ユーザー様への直接販売は行いません。お問い合わせ内容に応じて代理店様へ連携します。",
+  "sales_policy": "一般ユーザー様からの直接のご相談・ご購入に対応しています。お問い合わせ内容に応じて担当者がご案内します。",
   "faq_knowledge_base": {
     "url": "https://damaga-pro.jp/faq/",
     "published_questions": 120,
