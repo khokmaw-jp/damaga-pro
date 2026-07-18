@@ -38,7 +38,7 @@ $structuredData = [
     'mainEntity' => [[
         '@type' => 'Question',
         'name' => $item['question'],
-        'acceptedAnswer' => ['@type' => 'Answer', 'text' => $item['short_answer']],
+        'acceptedAnswer' => ['@type' => 'Answer', 'text' => $item['schema_answer'] ?? $item['short_answer']],
     ]],
 ];
 require __DIR__ . '/partials/header.php';

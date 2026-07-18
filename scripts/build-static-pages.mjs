@@ -260,7 +260,7 @@ ${faqFooter}`);
       mainEntity: [{
         '@type': 'Question',
         name: item.question,
-        acceptedAnswer: { '@type': 'Answer', text: item.short_answer },
+        acceptedAnswer: { '@type': 'Answer', text: item.schema_answer || item.short_answer },
       }],
     };
     const sections = (item.sections || []).map((section) => `
